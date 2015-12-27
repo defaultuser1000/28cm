@@ -79,54 +79,30 @@ namespace _28cm
 
             if ((comboBox1.Text.Length > 0) && (comboBox2.Text.Length > 0))
             {
-                /*//sql = "SELECT name FROM '" + comboBox1.Text + "' WHERE COLUMN_NAME = ('" + DateTime.Today + "')";
-                sql1 = "SELECT les_type FROM days WHERE date = ('" + DateTime.Today + "')";
-                //command = new SQLiteCommand(sql, m_dbConnection);
-                command1 = new SQLiteCommand(sql1, m_dbConnection);
-
-                m_dbConnection.Open();
-                //reader = command.ExecuteReader();
-                reader1 = command1.ExecuteReader();
-                exist = false;
-
-                if (/*reader.Read() && *//*reader1.Read())*/
-                                         /* exist = true;
-
-                                      reader1.Close();
-                                      m_dbConnection.Close();
-
-
-                                      if (!exist)
-                                      {*/
-
-                try { sql = "ALTER TABLE '" + comboBox1.Text + "' ADD COLUMN '" + DateTime.Today + "' TEXT";
+                string les_column = Convert.ToString(DateTime.Now) + " " + comboBox2.Text;
+                
+                try { sql = "ALTER TABLE '" + comboBox1.Text + "' ADD COLUMN '" + les_column + "' TEXT";
                     command = new SQLiteCommand(sql, m_dbConnection);
-
 
                     m_dbConnection.Open();
                     command.ExecuteNonQuery();
-
                     m_dbConnection.Close();
                 }
                 catch {
                     MessageBox.Show("Занятие существует", "Ошибка",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Refresh();
                  }
 
-                    sql = "INSERT INTO days (date, les_type, group) VALUES ('" + DateTime.Today + "','" + comboBox2.Text + "', '" + comboBox1.Text + "' )";
+                    /*sql = "INSERT INTO days (date, les_type, group) VALUES ('" + DateTime.Today + "','" + comboBox2.Text + "', '" + comboBox1.Text + "' )";
                     command = new SQLiteCommand(sql, m_dbConnection);
 
                 m_dbConnection.Open();
                 command.ExecuteNonQuery();
-                m_dbConnection.Close();
+                m_dbConnection.Close();*/
 
                 Close();
-               /* }
-                else
-                {
-                    MessageBox.Show("Занятие существует", "Ошибка",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
+               
             }
             else
             {
