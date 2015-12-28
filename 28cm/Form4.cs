@@ -45,7 +45,7 @@ namespace _28cm
 
             for (i = 1; i <= N; i++)
             {
-                sql = "SELECT name, year FROM Groups WHERE rowid = ('" + i + "')";
+                sql = "SELECT name FROM Groups WHERE rowid = ('" + i + "')";
                 command = new SQLiteCommand(sql, m_dbConnection);
 
                 m_dbConnection.Open();

@@ -13,7 +13,9 @@ namespace _28cm
 {
     public partial class Form5 : Form
     {
+        int ball = 0;
         
+
         public Form5(string student, string group)
         {
             InitializeComponent();
@@ -51,9 +53,11 @@ namespace _28cm
             m_dbConnection.Close();
 
             textBox1.Text = balls.ToString();
-            textBox2.Text = pefts.ToString();
-            textBox3.Text = lefts.ToString();
-
+            label8.Text = pefts.ToString();
+            label7.Text = lefts.ToString();
+            label10.Text = Convert.ToString(lefts + pefts);
+            ball = Convert.ToInt32(textBox1.Text);
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -68,13 +72,27 @@ namespace _28cm
             SQLiteCommand command;
             
 
-            sql = "UPDATE '" + label6.Text + "' SET balls = ('" + textBox1.Text + "'), lefts = ('" + textBox3.Text + "') WHERE name = ('" + groupBox1.Text + "')";
+            sql = "UPDATE '" + label6.Text + "' SET balls = ('" + textBox1.Text + "') WHERE name = ('" + groupBox1.Text + "')";
             command = new SQLiteCommand(sql, m_dbConnection);
 
             m_dbConnection.Open();
             command.ExecuteNonQuery();
             m_dbConnection.Close();
+            Form1.tabControl1.TabPages.Clear();
+            Form1.Initialize();
             Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ball += 1;
+            textBox1.Text = ball.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ball -= 1;
+            textBox1.Text = ball.ToString();
         }
     }
 }

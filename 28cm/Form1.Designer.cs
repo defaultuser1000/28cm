@@ -38,6 +38,7 @@
             this.редактироватьГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПриложенииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отметитьПосещениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             Form1.tabControl1 = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.добавитьToolStripMenuItem,
             this.добавитьСтудентаToolStripMenuItem,
             this.добавитьЗанятиеToolStripMenuItem,
+            this.отметитьПосещениеToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
@@ -68,28 +70,28 @@
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.добавитьToolStripMenuItem.Text = "Добавить группу";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
             // добавитьСтудентаToolStripMenuItem
             // 
             this.добавитьСтудентаToolStripMenuItem.Name = "добавитьСтудентаToolStripMenuItem";
-            this.добавитьСтудентаToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.добавитьСтудентаToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.добавитьСтудентаToolStripMenuItem.Text = "Добавить студента";
             this.добавитьСтудентаToolStripMenuItem.Click += new System.EventHandler(this.добавитьСтудентаToolStripMenuItem_Click);
             // 
             // добавитьЗанятиеToolStripMenuItem
             // 
             this.добавитьЗанятиеToolStripMenuItem.Name = "добавитьЗанятиеToolStripMenuItem";
-            this.добавитьЗанятиеToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.добавитьЗанятиеToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.добавитьЗанятиеToolStripMenuItem.Text = "Добавить занятие";
             this.добавитьЗанятиеToolStripMenuItem.Click += new System.EventHandler(this.добавитьЗанятиеToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -123,6 +125,13 @@
             this.оПриложенииToolStripMenuItem.Text = "О приложении";
             this.оПриложенииToolStripMenuItem.Click += new System.EventHandler(this.оПриложенииToolStripMenuItem_Click);
             // 
+            // отметитьПосещениеToolStripMenuItem
+            // 
+            this.отметитьПосещениеToolStripMenuItem.Name = "отметитьПосещениеToolStripMenuItem";
+            this.отметитьПосещениеToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.отметитьПосещениеToolStripMenuItem.Text = "Отметить посещение";
+            this.отметитьПосещениеToolStripMenuItem.Click += new System.EventHandler(this.отметитьПосещениеToolStripMenuItem_Click);
+            // 
             // tabControl2
             // 
             Form1.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -139,17 +148,16 @@
             this.ClientSize = new System.Drawing.Size(651, 395);
             this.Controls.Add(Form1.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Учет успеваемости v1.0";
-            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(true);
+            this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 
         }
 
@@ -166,6 +174,8 @@
         //public static System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ToolStripMenuItem добавитьЗанятиеToolStripMenuItem;
         public static System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.ToolStripMenuItem отметитьПосещениеToolStripMenuItem;
+        //private System.Windows.Forms.TabControl tabControl2;
     }
 }
 

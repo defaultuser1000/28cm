@@ -43,7 +43,8 @@ namespace _28cm
 
         private void оПриложенииToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form Form7 = new Form7();
+            Form7.Show();
         }
 
         private void редактироватьГруппуToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace _28cm
             Form6.Show();
         }
 
-        public static void Poseshenie(DataGridView gridData)
+        /*public static void Poseshenie(DataGridView gridData)
         {
             DateTimePicker date = new DateTimePicker();
 
@@ -85,7 +86,7 @@ namespace _28cm
             gridColumn_poseshenie.Name = "poseshenie";
             gridColumn_poseshenie.ReadOnly = false;
             gridData.Columns.Add(gridColumn_poseshenie);
-        }
+        }*/
 
         
         public static void Initialize()
@@ -102,6 +103,7 @@ namespace _28cm
             string student_name = "";
             double balls = 42.0;
             int lefts = 42;
+            int pefts = 42;
 
 
             sql = "SELECT COUNT(rowid) FROM Groups";
@@ -242,17 +244,17 @@ namespace _28cm
                     rows.Cells[3].Value = lefts;
 
                     //----------------------------------------------------------------------
-                    sql = "SELECT lefts FROM ('" + name1 + "') WHERE rowid = ('" + j + "')";
+                    sql = "SELECT pefts FROM ('" + name1 + "') WHERE rowid = ('" + j + "')";
                     command = new SQLiteCommand(sql, m_dbConnection);
 
                     m_dbConnection.Open();
                     reader = command.ExecuteReader();
                     if (reader.Read())
-                        lefts = Convert.ToInt32(reader["lefts"]);
+                        pefts = Convert.ToInt32(reader["pefts"]);
                     reader.Close();
                     m_dbConnection.Close();
 
-                    rows.Cells[4].Value = lefts;
+                    rows.Cells[4].Value = pefts;
 
                     gridData.Rows.Add(rows);
                 }
@@ -300,6 +302,12 @@ namespace _28cm
                 
         }
 
+        private void отметитьПосещениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Form8 = new Form8();
+            Form8.Show();
+        }
+
         /*public static void tab_create(string Name_of_tab)
         {
             TabPage TabPage = new TabPage(Name_of_tab);
@@ -326,32 +334,32 @@ namespace _28cm
             gridColumn_plus.Name = "plus";
             gridColumn_plus.ReadOnly = false;
             gridData.Columns.Add(gridColumn_plus);*/
-            /*
-            DataGridViewTextBoxColumn gridColumn_balls = new DataGridViewTextBoxColumn();
-            gridColumn_balls.HeaderText = "Кол-во баллов";
-            gridColumn_balls.Name = "balls";
-            gridColumn_balls.ReadOnly = false;
-            gridData.Columns.Add(gridColumn_balls);
-            //gridData.CurrentCell.Value.ToString();
+        /*
+        DataGridViewTextBoxColumn gridColumn_balls = new DataGridViewTextBoxColumn();
+        gridColumn_balls.HeaderText = "Кол-во баллов";
+        gridColumn_balls.Name = "balls";
+        gridColumn_balls.ReadOnly = false;
+        gridData.Columns.Add(gridColumn_balls);
+        //gridData.CurrentCell.Value.ToString();
 
-            /*DataGridViewButtonColumn gridColumn_minus = new DataGridViewButtonColumn();
-            gridColumn_minus.HeaderText = "Минус балл";
-            gridColumn_minus.Name = "minus";
-            gridColumn_minus.ReadOnly = false;
-            gridData.Columns.Add(gridColumn_minus);*/
+        /*DataGridViewButtonColumn gridColumn_minus = new DataGridViewButtonColumn();
+        gridColumn_minus.HeaderText = "Минус балл";
+        gridColumn_minus.Name = "minus";
+        gridColumn_minus.ReadOnly = false;
+        gridData.Columns.Add(gridColumn_minus);*/
 
-           /* DataGridViewTextBoxColumn gridColumn_lefts = new DataGridViewTextBoxColumn();
-            gridColumn_lefts.HeaderText = "Лекций пропущено";
-            gridColumn_lefts.Name = "lefts";
-            gridColumn_lefts.ReadOnly = false;
-            gridData.Columns.Add(gridColumn_lefts);
+        /* DataGridViewTextBoxColumn gridColumn_lefts = new DataGridViewTextBoxColumn();
+         gridColumn_lefts.HeaderText = "Лекций пропущено";
+         gridColumn_lefts.Name = "lefts";
+         gridColumn_lefts.ReadOnly = false;
+         gridData.Columns.Add(gridColumn_lefts);
 
-            DataGridViewTextBoxColumn gridColumn_pefts = new DataGridViewTextBoxColumn();
-            gridColumn_pefts.HeaderText = "Практик пропущено";
-            gridColumn_pefts.Name = "pefts";
-            gridColumn_pefts.ReadOnly = false;
-            gridData.Columns.Add(gridColumn_pefts);
-        }*/
+         DataGridViewTextBoxColumn gridColumn_pefts = new DataGridViewTextBoxColumn();
+         gridColumn_pefts.HeaderText = "Практик пропущено";
+         gridColumn_pefts.Name = "pefts";
+         gridColumn_pefts.ReadOnly = false;
+         gridData.Columns.Add(gridColumn_pefts);
+     }*/
 
     }
 }
