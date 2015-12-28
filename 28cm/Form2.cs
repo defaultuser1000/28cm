@@ -61,7 +61,7 @@ namespace _28cm
                     if (!exist)
                     {
                         
-                        sql = "CREATE TABLE '" + Group_Name + "' (rowid INTEGER, name TEXT, balls REAL, lefts INTEGER)";
+                        sql = "CREATE TABLE '" + Group_Name + "' (rowid INTEGER, name TEXT, balls REAL, lefts INTEGER, pefts INTEGER)";
                         command = new SQLiteCommand(sql, m_dbConnection);
 
                         m_dbConnection.Open();

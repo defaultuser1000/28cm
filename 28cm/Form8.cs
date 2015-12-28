@@ -115,7 +115,7 @@ namespace _28cm
                     reader.Close();
                     m_dbConnection.Close();
 
-                    for (int i = 0; i < N; i++)
+                    for (int i = 1; i <= N; i++)
                     {
                         sql = "SELECT name FROM ('" + Name_of_group + "') WHERE rowid = ('" + i + "')";
                         command = new SQLiteCommand(sql, m_dbConnection);
@@ -148,7 +148,7 @@ namespace _28cm
              
                 for(int i = 1; i <= checkedListBox1.Items.Count; i++)
                 {
-                    if (checkedListBox1.CheckedIndices.Contains(i))
+                    if (checkedListBox1.GetItemCheckState(i-1) == CheckState.Checked)
                     {
                         sql = "UPDATE poseshenie SET prisut = ('" + 1 + "') WHERE date = ('" + DateTime.Today + "') AND student = ('" + i + "') AND les_type = ('" + les_type + "') AND grou_p = ('" + Name_of_group + "')";
                         command = new SQLiteCommand(sql, m_dbConnection);
@@ -198,7 +198,7 @@ namespace _28cm
                                 temp_pefts++;
                                 //temp_pefts.ToString();
 
-                                sql = "UPDATE '" + Name_of_group + "' SET lefts = ('" + temp_pefts + "') WHERE rowid = ('" + i + "')";
+                                sql = "UPDATE '" + Name_of_group + "' SET pefts = ('" + temp_pefts + "') WHERE rowid = ('" + i + "')";
                                 command = new SQLiteCommand(sql, m_dbConnection);
 
                                 m_dbConnection.Open();

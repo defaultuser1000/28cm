@@ -35,7 +35,7 @@
             this.добавитьЗанятиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.редактироватьГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.редактироватьГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПриложенииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отметитьПосещениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +98,7 @@
             // правкаToolStripMenuItem
             // 
             this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.редактироватьГруппуToolStripMenuItem,
+            //this.редактироватьГруппуToolStripMenuItem,
             this.редактироватьToolStripMenuItem});
             this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
             this.правкаToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
@@ -106,10 +106,10 @@
             // 
             // редактироватьГруппуToolStripMenuItem
             // 
-            this.редактироватьГруппуToolStripMenuItem.Name = "редактироватьГруппуToolStripMenuItem";
+            /*this.редактироватьГруппуToolStripMenuItem.Name = "редактироватьГруппуToolStripMenuItem";
             this.редактироватьГруппуToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.редактироватьГруппуToolStripMenuItem.Text = "Редактировать группу";
-            this.редактироватьГруппуToolStripMenuItem.Click += new System.EventHandler(this.редактироватьГруппуToolStripMenuItem_Click);
+            this.редактироватьГруппуToolStripMenuItem.Click += new System.EventHandler(this.редактироватьГруппуToolStripMenuItem_Click);*/
             // 
             // редактироватьToolStripMenuItem
             // 
@@ -168,7 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem добавитьСтудентаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem правкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem редактироватьГруппуToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem редактироватьГруппуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПриложенииToolStripMenuItem;
         //public static System.Windows.Forms.TabControl tabControl1;
