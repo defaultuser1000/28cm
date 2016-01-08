@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.saveButton_form2 = new System.Windows.Forms.Button();
             this.exitButton_form2 = new System.Windows.Forms.Button();
             this.textBox_group = new System.Windows.Forms.TextBox();
@@ -38,6 +39,7 @@
             // 
             // saveButton_form2
             // 
+            this.saveButton_form2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveButton_form2.Location = new System.Drawing.Point(32, 118);
             this.saveButton_form2.Name = "saveButton_form2";
             this.saveButton_form2.Size = new System.Drawing.Size(67, 23);
@@ -73,6 +75,7 @@
             // groupName_form2
             // 
             this.groupName_form2.AutoSize = true;
+            this.groupName_form2.BackColor = System.Drawing.Color.Transparent;
             this.groupName_form2.Location = new System.Drawing.Point(32, 16);
             this.groupName_form2.Name = "groupName_form2";
             this.groupName_form2.Size = new System.Drawing.Size(42, 13);
@@ -82,6 +85,7 @@
             // Year_form2
             // 
             this.Year_form2.AutoSize = true;
+            this.Year_form2.BackColor = System.Drawing.Color.Transparent;
             this.Year_form2.Location = new System.Drawing.Point(32, 60);
             this.Year_form2.Name = "Year_form2";
             this.Year_form2.Size = new System.Drawing.Size(78, 13);
@@ -92,6 +96,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(206, 162);
             this.Controls.Add(this.Year_form2);
             this.Controls.Add(this.groupName_form2);

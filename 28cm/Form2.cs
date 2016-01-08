@@ -78,7 +78,7 @@ namespace _28cm
 
                         
                         TabPage TabPage = new TabPage(Group_Name + " " + Year_Group);
-                        Form1.tabControl1.TabPages.Add(TabPage);
+                        Form1.tabControl2.TabPages.Add(TabPage);
 
                         DataGridView gridData = new DataGridView();
                         gridData.Dock = DockStyle.Fill;

@@ -136,7 +136,7 @@ namespace _28cm
                 m_dbConnection.Close();
 
                 TabPage TabPage = new TabPage(Name_of_tab);
-                tabControl1.TabPages.Add(TabPage);
+                tabControl2.TabPages.Add(TabPage);
 
                 DataGridView gridData = new DataGridView();
                 gridData.Dock = DockStyle.Fill;

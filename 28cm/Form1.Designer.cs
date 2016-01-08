@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьСтудентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьЗанятиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отметитьПосещениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            //this.редактироватьГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПриложенииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отметитьПосещениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            Form1.tabControl1 = new System.Windows.Forms.TabControl();
+            tabControl2 = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,13 @@
             this.добавитьЗанятиеToolStripMenuItem.Text = "Добавить занятие";
             this.добавитьЗанятиеToolStripMenuItem.Click += new System.EventHandler(this.добавитьЗанятиеToolStripMenuItem_Click);
             // 
+            // отметитьПосещениеToolStripMenuItem
+            // 
+            this.отметитьПосещениеToolStripMenuItem.Name = "отметитьПосещениеToolStripMenuItem";
+            this.отметитьПосещениеToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.отметитьПосещениеToolStripMenuItem.Text = "Отметить посещение";
+            this.отметитьПосещениеToolStripMenuItem.Click += new System.EventHandler(this.отметитьПосещениеToolStripMenuItem_Click);
+            // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
@@ -98,18 +105,10 @@
             // правкаToolStripMenuItem
             // 
             this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            //this.редактироватьГруппуToolStripMenuItem,
             this.редактироватьToolStripMenuItem});
             this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
             this.правкаToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.правкаToolStripMenuItem.Text = "Правка";
-            // 
-            // редактироватьГруппуToolStripMenuItem
-            // 
-            /*this.редактироватьГруппуToolStripMenuItem.Name = "редактироватьГруппуToolStripMenuItem";
-            this.редактироватьГруппуToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.редактироватьГруппуToolStripMenuItem.Text = "Редактировать группу";
-            this.редактироватьГруппуToolStripMenuItem.Click += new System.EventHandler(this.редактироватьГруппуToolStripMenuItem_Click);*/
             // 
             // редактироватьToolStripMenuItem
             // 
@@ -125,30 +124,24 @@
             this.оПриложенииToolStripMenuItem.Text = "О приложении";
             this.оПриложенииToolStripMenuItem.Click += new System.EventHandler(this.оПриложенииToolStripMenuItem_Click);
             // 
-            // отметитьПосещениеToolStripMenuItem
-            // 
-            this.отметитьПосещениеToolStripMenuItem.Name = "отметитьПосещениеToolStripMenuItem";
-            this.отметитьПосещениеToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.отметитьПосещениеToolStripMenuItem.Text = "Отметить посещение";
-            this.отметитьПосещениеToolStripMenuItem.Click += new System.EventHandler(this.отметитьПосещениеToolStripMenuItem_Click);
-            // 
             // tabControl2
             // 
-            Form1.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            Form1.tabControl1.Location = new System.Drawing.Point(0, 24);
-            Form1.tabControl1.Name = "tabControl1";
-            Form1.tabControl1.SelectedIndex = 0;
-            Form1.tabControl1.Size = new System.Drawing.Size(651, 371);
-            Form1.tabControl1.TabIndex = 3;
+            tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            tabControl2.Location = new System.Drawing.Point(0, 24);
+            tabControl2.Name = "tabControl2";
+            tabControl2.SelectedIndex = 0;
+            tabControl2.Size = new System.Drawing.Size(651, 371);
+            tabControl2.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 395);
-            this.Controls.Add(Form1.tabControl1);
+            this.Controls.Add(tabControl2);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -173,8 +166,9 @@
         private System.Windows.Forms.ToolStripMenuItem оПриложенииToolStripMenuItem;
         //public static System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ToolStripMenuItem добавитьЗанятиеToolStripMenuItem;
-        public static System.Windows.Forms.TabControl tabControl1;
+        public static System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.ToolStripMenuItem отметитьПосещениеToolStripMenuItem;
+        //private System.Windows.Forms.TabControl tabControl2;
         //private System.Windows.Forms.TabControl tabControl2;
     }
 }

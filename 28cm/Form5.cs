@@ -78,21 +78,23 @@ namespace _28cm
             m_dbConnection.Open();
             command.ExecuteNonQuery();
             m_dbConnection.Close();
-            Form1.tabControl1.TabPages.Clear();
+            Form1.tabControl2.TabPages.Clear();
             Form1.Initialize();
             Close();
         }
-
+        #region +/- баллы
+        
         private void button4_Click(object sender, EventArgs e)
         {
-            ball += 1;
-            textBox1.Text = ball.ToString();
+            //ball += 1;
+            //textBox1.Text = ball.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ball -= 1;
-            textBox1.Text = ball.ToString();
+            //ball -= 1;
+            //textBox1.Text = ball.ToString();
         }
+        #endregion
     }
 }

@@ -74,7 +74,7 @@ namespace _28cm
         private void button1_Click(object sender, EventArgs e)
         {
             var m_dbConnection = new SQLiteConnection("Data Source=28cm_db.sqlite;Version=3;");
-            bool exist = false;
+            //bool exist = false;
 
             if ((comboBox1.Text.Length > 0) && (comboBox2.Text.Length > 0))
             {
@@ -120,7 +120,7 @@ namespace _28cm
                         m_dbConnection.Close();
                     }
                     
-                    Form1.tabControl1.TabPages.Clear();
+                    Form1.tabControl2.TabPages.Clear();
                     Form1.Initialize();
                     Close();
                 /*}

@@ -212,7 +212,7 @@ namespace _28cm
                     }
                     
                 }
-            Form1.tabControl1.TabPages.Clear();
+            Form1.tabControl2.TabPages.Clear();
             Form1.Initialize();
             Close();
 

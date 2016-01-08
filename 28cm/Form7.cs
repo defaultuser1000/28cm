@@ -19,6 +19,8 @@ namespace _28cm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.BackgroundImage = Image.FromFile(@"D:\Учеба\ВУЗ\Мерген\28cm\28cm_2\28cm\28cm\28cm\bin\Release\Кнопки\ОК нажат.png", false);
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
             Close();
         }
     }

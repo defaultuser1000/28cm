@@ -101,7 +101,7 @@ namespace _28cm
                     m_dbConnection.Open();
                     command.ExecuteNonQuery();
                     m_dbConnection.Close();
-                    Form1.tabControl1.TabPages.Clear();
+                    Form1.tabControl2.TabPages.Clear();
                     Form1.Initialize();
                     Close();
                 }
